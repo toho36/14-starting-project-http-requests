@@ -8,7 +8,7 @@ function App() {
   function fetchMoviesHandler() {
     fetch('https://swapi.dev/api/films/')
       .then((response) => {
-        response.json();
+        return response.json();
       })
       .then((data) => {
         const transformedMovies = data.results.map((movieData) => {
