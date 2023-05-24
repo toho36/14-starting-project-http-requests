@@ -58,35 +58,35 @@ const Wrapper = styled.div`
 `;
 const Card = styled.div`
   min-height: 25rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   overflow: hidden;
 
   img {
-    border-radius: 2rem;
+    border-radius: 1rem;
     // position: absolute;
-    left: 0;
+    // left: 0;
     width: 15rem;
     height: 15rem;
     justify-content: center;
     align-items: center;
     object-fit: cover;
   }
-  // p {
-  //   // position: absolute;
-  //   z-index: 10;
-  //   left: 50%;
-  //   bottom: 0%;
-  //   transform: translate(10%, 0%);
-  //   color: white;
-  //   width: 100%;
-  //   // text-align: center;
-  //   font-weight: 600;
-  //   font-size: 1rem;
-  //   height: 40%;
-  //   display: flex;
-  //   // justify-content: center;
-  //   align-items: center;
-  // }
+  p {
+    display: flex;
+    transform: translate(10%, 0%);
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+    position: relative;
+    // z-index: 10;
+    // left: 50%;
+    //   bottom: 0%;
+    //   color: white;
+    // width: 100%;
+    //   height: 40%;
+    //   // justify-content: center;
+    // align-items: center;
+  }
 `;
 
 export default Menu;

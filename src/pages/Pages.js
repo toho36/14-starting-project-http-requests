@@ -1,12 +1,16 @@
 import React from 'react';
 import Home from './Home';
-import './Pages.css';
+import User from './User';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 function Pages() {
   return (
-    <div className="pages">
-      <Home />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/User" element={<User />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
