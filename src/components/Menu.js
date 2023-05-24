@@ -20,12 +20,11 @@ function Menu() {
   return (
     <div>
       <div>Menu</div>
-
       <Wrapper>
         {dishes.map((dish) => {
           return (
-            <Card>
-              <div key={dish.id}>
+            <Card key={dish.id}>
+              <div>
                 <p>{dish.name}</p>
                 <img src={dish.imgUrl} alt={dish.name} />
               </div>
@@ -80,4 +79,5 @@ const Card = styled.div`
     align-items: center;
   }
 `;
+
 export default Menu;
