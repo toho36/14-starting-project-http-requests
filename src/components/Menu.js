@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { DUMMY_MEALS } from '../recipes/recipes';
+import styled from 'styled-components';
 
 function Menu() {
   const [dishes, setDishes] = useState([]);
@@ -21,13 +22,33 @@ function Menu() {
       <div>Menu</div>
       {dishes.map((dish) => {
         return (
-          <div key={dish.id}>
-            <p>{dish.name}</p>
-          </div>
+          <Wrapper>
+            <Card>
+              <div key={dish.id}>
+                <p>{dish.name}</p>
+                <img src={dish.imgUrl} alt={dish.name} />
+              </div>
+            </Card>
+          </Wrapper>
         );
       })}
     </div>
   );
 }
+const Wrapper = styled.div`
+  margin: 4rem 0rem;
+`;
+const Card = styled.div`
+  min-height: 25rem;
 
+  border-radius: 2rem;
+  overflow: hidden;
+
+  img {
+    border-radius: 2rem;
+    min-height: 10rem;
+
+    max-height: 15rem;
+  }
+`;
 export default Menu;
