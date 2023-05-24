@@ -23,12 +23,17 @@ function Menu() {
       {dishes.map((dish) => {
         return (
           <Wrapper>
-            <Card>
-              <div key={dish.id}>
-                <p>{dish.name}</p>
-                <img src={dish.imgUrl} alt={dish.name} />
-              </div>
-            </Card>
+            <h3>Dishes</h3>
+            {dishes.map((dish) => {
+              return (
+                <Card>
+                  <div key={dish.id}>
+                    <p>{dish.name}</p>
+                    <img src={dish.imgUrl} alt={dish.name} />
+                  </div>
+                </Card>
+              );
+            })}
           </Wrapper>
         );
       })}
@@ -37,6 +42,9 @@ function Menu() {
 }
 const Wrapper = styled.div`
   margin: 4rem 0rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 `;
 const Card = styled.div`
   min-height: 25rem;
