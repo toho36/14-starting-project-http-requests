@@ -8,13 +8,21 @@ function Menu() {
     getMenu();
   }, []);
   const getMenu = () => {
+    const check = localStorage.getItem('recipe');
     // const api = await fetch(
     //   `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_KEY}&number=9`
     // );
     // const data = await api.json();
-    const data = DUMMY_MEALS;
-    console.log(data);
-    setDishes(data);
+    if (check) {
+      setDishes(JSON.parse(check));
+      console.log('got from storage');
+    } else {
+      const data = DUMMY_MEALS;
+      localStorage.setItem('recipe', JSON.stringify(data));
+      console.log(data);
+      console.log('sent to storage');
+      setDishes(data);
+    }
   };
 
   return (
