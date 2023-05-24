@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { DUMMY_MEALS } from '../recipes/recipes';
 import styled from 'styled-components';
+import './Menu.css';
 
 function Menu() {
   const [dishes, setDishes] = useState([]);
@@ -27,7 +28,7 @@ function Menu() {
 
   return (
     <div>
-      <div>Menu</div>
+      <div className="menu">Menu</div>
       <Wrapper>
         {dishes.map((dish) => {
           return (

@@ -1,33 +1,3 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-.grid-item {
-  background-color: #f2f2f2;
-  padding: 20px;
-  cursor: pointer;
-}
-
-.grid-item-content {
-  text-align: center;
-}
-
-.grid-item.expanded {
-  height: auto;
-}
-
-.grid-item.expanded h2 {
-  margin-bottom: 10px;
-}
-
-.grid-item.expanded p {
-  margin-top: 10px;
+.menu {
+  font-size: 2rem;
 }
