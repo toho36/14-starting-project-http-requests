@@ -28,7 +28,6 @@ function Menu() {
 
   return (
     <div>
-      <div className="menu">Menu</div>
       <Wrapper>
         {dishes.map((dish) => {
           return (
@@ -37,7 +36,7 @@ function Menu() {
                 <p>{dish.name}</p>
                 <img src={dish.imgUrl} alt={dish.name} />
                 <p>{dish.author}</p>
-                <p>{dish.tags}</p>
+                {/* <p>{dish.tags}</p> */}
               </div>
             </Card>
           );
@@ -47,11 +46,11 @@ function Menu() {
   );
 }
 const Wrapper = styled.div`
-  margin: 4rem 0rem;
+  margin: 2rem 0rem;
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1rem;
   transition: all 0.3s ease;
 
   @media (max-width: 768px) {
