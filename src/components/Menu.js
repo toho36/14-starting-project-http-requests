@@ -36,6 +36,8 @@ function Menu() {
               <div>
                 <p>{dish.name}</p>
                 <img src={dish.imgUrl} alt={dish.name} />
+                <p>{dish.author}</p>
+                <p>{dish.tags}</p>
               </div>
             </Card>
           );
