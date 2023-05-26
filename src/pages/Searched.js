@@ -7,10 +7,13 @@ function Searched() {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
   let params = useParams();
   const getSearched = (name) => {
-    const meal = DUMMY_MEALS.find((meal) => meal.name === name);
+    const meal = DUMMY_MEALS.filter((meal) =>
+      meal.name.toLowerCase().includes(name.toLowerCase())
+    );
+    // const meal = DUMMY_MEALS.find((meal) => meal.name === name);
     console.log(meal);
     console.log('sent to storage');
-    setSearchedRecipes([meal]);
+    setSearchedRecipes(meal);
   };
   useEffect(() => {
     getSearched(params.search);
