@@ -10,6 +10,16 @@ const DUMMY_MEALS = [
     author: '12',
   },
   {
+    id: '64243c7515116e263fe',
+    name: 'Summers Wilder',
+    description:
+      'Minim  nostrud irure fugiat voluptate. Velit fugiat ea ut pariatur in non amet id do nulla. Nisi officia amet aute consequat ut Lorem reprehenderit consequat fugiat velit enim adipisicing non. Deserunt commodo cupidatat mollit proident cillum aliquip.\r\n',
+    imgUrl:
+      'https://thedailydishrestaurant.com/wp-content/uploads/2023/01/Daily-Dish-5-1030x1023.jpg',
+    tags: ['amet', 'aliquip', 'proident', 'anim', 'id', 'in'],
+    author: '12',
+  },
+  {
     id: '64243c7c22679e569c5c2236',
     name: 'David Guerrero',
     description:
